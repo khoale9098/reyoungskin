@@ -1,11 +1,13 @@
 <?php
+
 /**
  * Pricing Menu Data Structure
  *
  * @package ReyoungSkin
  */
 
-function reyoungskin_get_pricing_data() {
+function reyoungskin_get_pricing_data()
+{
     return [
         'left_column' => [
             [
@@ -55,7 +57,7 @@ function reyoungskin_get_pricing_data() {
                 'note' => 'Numbing cream is applied to ensure your comfort throughout the treatment.',
             ],
             [
-                'title' => 'Salmon DNA Dermal Needling',
+                'title' => 'Salmon DNA Microneedling',
                 'price' => '$190',
                 'was_price' => '$299',
                 'paragraphs' => [

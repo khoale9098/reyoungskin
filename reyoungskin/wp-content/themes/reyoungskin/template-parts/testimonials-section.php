@@ -3,15 +3,16 @@
 
 
     <h2
-      class="text-center mb-12 md:mb-16 lg:mb-20 font-serif text-5xl md:text-6xl lg:text-7xl font-light tracking-wider">
+      class="text-center mb-12 md:mb-16 lg:mb-20 font-serif text-5xl md:text-6xl lg:text-7xl font-light "
+      data-anim="fade-down" data-anim-duration="800">
       What Our Customers Are Saying
     </h2>
 
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 mb-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6 mb-12" data-anim="stagger" data-anim-stagger="120">
 
 
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center" data-anim-child>
         <!-- Rating Stars for Review 1 -->
         <div class="flex gap-1.5 mb-6">
           <?php for ($i = 0; $i < 5; $i++): ?>
@@ -45,7 +46,7 @@
       </div>
 
 
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center" data-anim-child>
         <!-- Rating Stars for Review 2 -->
         <div class="flex gap-1.5 mb-6">
           <?php for ($i = 0; $i < 5; $i++): ?>
@@ -79,7 +80,7 @@
       </div>
 
 
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center" data-anim-child>
         <!-- Rating Stars for Review 3 -->
         <div class="flex gap-1.5 mb-6">
           <?php for ($i = 0; $i < 5; $i++): ?>
@@ -115,9 +116,9 @@
     </div>
 
 
-    <div class="flex justify-center">
+    <div class="flex justify-center" data-anim="fade-up" data-anim-delay="100">
       <a href="<?php echo esc_url(home_url('/reviews')); ?>"
-        class="inline-block px-8 py-3 text-white font-medium text-sm tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+        class="btn-cta inline-block px-8 py-3 text-white font-medium text-sm tracking-wide"
         style="background-color: #6E8F87; border-radius: 999px;" aria-label="See more customer reviews">
         See More
       </a>

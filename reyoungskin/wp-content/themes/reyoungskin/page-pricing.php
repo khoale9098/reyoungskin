@@ -46,7 +46,7 @@ get_header();
     <section class="w-full" style="background-color: rgb(237, 247, 219);">
       <div class="flex flex-col lg:flex-row min-h-[400px] md:min-h-[500px] lg:min-h-[600px] mx-auto max-w-screen-2xl">
         <!-- Hero Image -->
-        <div class="w-full lg:w-1/2 min-h-[300px] md:min-h-[400px] lg:min-h-full bg-cover bg-center bg-no-repeat"
+        <div class="w-full lg:w-1/2 min-h-[300px] md:min-h-[400px] lg:min-h-full bg-cover bg-center bg-no-repeat hero-image-animate"
           style="background-image: url('<?php echo esc_url($hero_image); ?>');" role="img"
           aria-label="<?php echo esc_attr(get_bloginfo('name')); ?> Pricing">
         </div>
@@ -57,13 +57,14 @@ get_header();
           <div class="w-full max-w-xl text-center">
 
             <!-- Logo -->
-            <div class="mb-6 md:mb-8 lg:mb-10 flex justify-center">
+            <div class="mb-6 md:mb-8 lg:mb-10 flex justify-center" data-anim="fade-up" data-anim-trigger="load" data-anim-delay="100">
               <img src="<?php echo esc_url($hero_logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?> Logo"
                 class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain" loading="eager">
             </div>
 
             <h2
-              class="mb-6 md:mb-8 font-serif lg:mb-10 text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed font-light">
+              class="mb-6 md:mb-8 font-serif lg:mb-10 text-lg sm:text-xl md:text-2xl lg:text-4xl leading-relaxed font-light"
+              data-anim="fade-up" data-anim-trigger="load" data-anim-delay="200">
               Service Details
               <br class="hidden sm:block">
               & Pricing
@@ -72,17 +73,17 @@ get_header();
             <!-- CTA Button -->
             <a href="https://www.fresha.com/a/beauty-bar-n-makeup-lash-n-brows-auckland-437-remuera-road-al4mar88/booking?menu=true&offerItems=sv%3A25356601&pId=758924&dppub=true&utm_content=link_in_bio&utm_medium=social&utm_source=ig&employeeId=2577179&cartId=4fa72077-b048-4326-8ab5-55611323aa81"
               target="_blank" rel="noopener noreferrer"
-              class="inline-block px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-3.5 md:py-4 lg:py-5 font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white rounded-full transition-all duration-300 mb-6 md:mb-8 lg:mb-10 hover:brightness-110 hover:scale-105 active:scale-95 no-underline"
+              class="btn-cta inline-block px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-3.5 md:py-4 lg:py-5 font-serif text-xl sm:text-2xl md:text-3xl !no-underline font-normal text-white rounded-full mb-6 md:mb-8 lg:mb-10"
               style="background: linear-gradient(90deg, #1F8E9A 0%, #9ACB7A 100%); letter-spacing: 0.1em; box-shadow: 0 8px 20px rgba(0,0,0,0.12);"
-              onmouseover="this.style.boxShadow='0 12px 28px rgba(0,0,0,0.18)'"
-              onmouseout="this.style.boxShadow='0 8px 20px rgba(0,0,0,0.12)'" aria-label="Book your appointment now">
+              data-anim="fade-up" data-anim-trigger="load" data-anim-delay="300"
+              aria-label="Book your appointment now">
               BOOK NOW
             </a>
 
             <!-- Hotline -->
-            <div class="flex flex-col items-center gap-1.5 sm:gap-2">
+            <div class="flex flex-col items-center gap-1.5 sm:gap-2" data-anim="fade-up" data-anim-trigger="load" data-anim-delay="400" data-anim-duration="600">
               <a href="tel:0212315978"
-                class="flex items-center gap-2 sm:gap-3 transition-all duration-300 hover:opacity-80 hover:scale-105"
+                class="link-hover flex items-center gap-2 sm:gap-3"
                 style="color: #5F8F8B;" aria-label="Call us at 021 231 5978">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                   class="flex-shrink-0 sm:w-6 sm:h-6">
@@ -103,6 +104,7 @@ get_header();
 
     <!-- Pricing Menu Section -->
     <?php get_template_part('template-parts/pricing-menu'); ?>
+    <?php get_template_part('template-parts/footer-contact-section'); ?>
     <?php
   }
   ?>

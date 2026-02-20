@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/CMU Serif Roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/CMU Serif Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/CMU Serif Roman Bold Nonextended.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../fonts/CMU Serif Bold Extended Italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 @theme {
   --breakpoint-xs: 480px;
   --breakpoint-sm: 600px;
@@ -25,6 +53,6 @@
   --text-8xl: var(--wp--preset--font-size--8-xl, 6rem);
   --text-9xl: var(--wp--preset--font-size--9-xl, 8rem);
 
-  --font-sans: 'Raleway', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-serif: 'CMU Serif', Georgia, serif;
 }

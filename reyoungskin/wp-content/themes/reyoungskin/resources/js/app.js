@@ -1,3 +1,6 @@
+// Import animations module
+import './animations.js';
+
 window.addEventListener('load', function () {
     let mainNavigation = document.getElementById('primary-navigation')
     let mainNavigationToggle = document.getElementById('primary-menu-toggle')

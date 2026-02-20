@@ -16,14 +16,15 @@
     class="w-full bg-primary flex items-center justify-center min-h-[420px] md:min-h-[480px] lg:min-h-[520px]"
     role="contentinfo">
     <div class="text-center">
-        <h2 class="font-serif text-white text-5xl md:text-6xl lg:text-7xl font-normal mb-8 md:mb-10 lg:mb-12">
+        <h2 class="font-serif text-white text-5xl md:text-6xl lg:text-7xl font-normal mb-8 md:mb-10 lg:mb-12" 
+            data-anim="fade-up">
             Social
         </h2>
 
-        <div class="flex items-center justify-center gap-16 md:gap-20 lg:gap-24">
+        <div class="flex items-center justify-center gap-16 md:gap-20 lg:gap-24" data-anim="stagger" data-anim-stagger="80">
             <a href="https://www.facebook.com/profile.php?id=61582669332322" target="_blank" rel="noopener noreferrer"
-                class="text-white transition-all duration-300 hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 rounded-lg"
-                aria-label="Visit our Facebook page">
+                class="social-icon text-white focus:outline-none focus:ring-4 focus:ring-white/50 rounded-lg"
+                aria-label="Visit our Facebook page" data-anim-child>
                 <svg class="w-20 h-20 md:w-24 md:h-24" fill="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -32,8 +33,8 @@
             </a>
 
             <a href="https://www.instagram.com/reyoung__skin" target="_blank" rel="noopener noreferrer"
-                class="text-white transition-all duration-300 hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/50 rounded-lg"
-                aria-label="Visit our Instagram page">
+                class="social-icon text-white focus:outline-none focus:ring-4 focus:ring-white/50 rounded-lg"
+                aria-label="Visit our Instagram page" data-anim-child>
                 <svg class="w-20 h-20 md:w-24 md:h-24" fill="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path

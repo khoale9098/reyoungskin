@@ -1,0 +1,340 @@
+/**
+ * ReYoung Skin - Animation Styles
+ * 
+ * CSS variables and utilities for scroll-reveal animations.
+ * Works in conjunction with animations.js
+ * 
+ * @see docs/motion-spec.md for animation specifications
+ */
+
+/* ============================================
+   CSS Variables (Single Source of Truth)
+   ============================================ */
+
+:root {
+  /* Easing curves */
+  --anim-easing: cubic-bezier(0.16, 1, 0.3, 1); /* Canva-like ease-out-expo */
+  --anim-easing-hover: cubic-bezier(0.4, 0, 0.2, 1); /* Standard ease-out */
+  --anim-easing-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Durations */
+  --anim-duration: 700ms;
+  --anim-duration-short: 300ms;
+  --anim-duration-long: 900ms;
+  --anim-duration-fast: 150ms;
+  
+  /* Distances */
+  --anim-distance: 24px;
+  --anim-distance-sm: 12px;
+  --anim-distance-lg: 32px;
+  
+  /* Stagger */
+  --anim-stagger: 100ms;
+  
+  /* Hover */
+  --hover-lift: -4px;
+  --hover-scale: 1.03;
+  --hover-scale-sm: 1.01;
+}
+
+/* ============================================
+   Reduced Motion Overrides
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --anim-duration: 0ms;
+    --anim-duration-short: 0ms;
+    --anim-duration-long: 0ms;
+    --anim-distance: 0;
+    --anim-stagger: 0ms;
+  }
+  
+  /* Ensure no transforms/transitions for animated elements */
+  [data-anim],
+  [data-anim-child] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Allow very subtle hover feedback */
+  .btn-hover,
+  .card-hover,
+  .link-hover {
+    transition: opacity var(--anim-duration-fast) ease !important;
+  }
+}
+
+/* Reduced motion class (set by JS) */
+.anim-reduced-motion [data-anim],
+.anim-reduced-motion [data-anim-child] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ============================================
+   Sticky Header Styles
+   ============================================ */
+
+header.sticky {
+  transition: 
+    background-color var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover),
+    backdrop-filter var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+header.sticky.header-scrolled {
+  background-color: rgba(110, 157, 150, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ============================================
+   Button Hover Effects
+   ============================================ */
+
+/* Primary CTA buttons (gradient buttons) */
+.btn-cta {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover),
+    filter var(--anim-duration-short) var(--anim-easing-hover);
+  will-change: transform;
+}
+
+.btn-cta:hover {
+  transform: scale(var(--hover-scale));
+  filter: brightness(1.08);
+}
+
+.btn-cta:active {
+  transform: scale(0.97);
+}
+
+/* Secondary buttons */
+.btn-secondary {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    background-color var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Card Hover Effects
+   ============================================ */
+
+.card-hover {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover);
+  will-change: transform;
+}
+
+.card-hover:hover {
+  transform: translateY(var(--hover-lift));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Service card specific */
+.service-card {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   Link Hover Effects
+   ============================================ */
+
+.link-hover {
+  transition: 
+    color var(--anim-duration-short) var(--anim-easing-hover),
+    opacity var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.link-hover:hover {
+  opacity: 0.8;
+}
+
+/* Navigation links with underline effect */
+.nav-link {
+  position: relative;
+  transition: color var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   Social Icon Hover Effects
+   ============================================ */
+
+.social-icon {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    opacity var(--anim-duration-short) var(--anim-easing-hover);
+  will-change: transform;
+}
+
+.social-icon:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* ============================================
+   Image Hover Effects (for gallery/portfolio)
+   ============================================ */
+
+.img-hover {
+  overflow: hidden;
+}
+
+.img-hover img {
+  transition: transform var(--anim-duration-long) var(--anim-easing);
+  will-change: transform;
+}
+
+.img-hover:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Price/Tag Badge Hover
+   ============================================ */
+
+.price-badge {
+  transition: 
+    transform var(--anim-duration-short) var(--anim-easing-hover),
+    box-shadow var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.price-badge:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Utility Classes for Manual Use
+   ============================================ */
+
+/* Transition utilities */
+.transition-smooth {
+  transition: all var(--anim-duration-short) var(--anim-easing-hover);
+}
+
+.transition-long {
+  transition: all var(--anim-duration) var(--anim-easing);
+}
+
+/* Transform utilities */
+.hover-lift:hover {
+  transform: translateY(var(--hover-lift));
+}
+
+.hover-scale:hover {
+  transform: scale(var(--hover-scale));
+}
+
+.hover-scale-sm:hover {
+  transform: scale(var(--hover-scale-sm));
+}
+
+/* GPU acceleration hint (use sparingly) */
+.gpu-accelerate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ============================================
+   Animation State Classes
+   ============================================ */
+
+/* Applied by JS when element enters viewport */
+.anim-visible {
+  /* Marker class for visible state - styles set by JS */
+  --anim-state: visible;
+}
+
+/* Applied by JS during initialization */
+.anim-initialized {
+  /* Marker class for initialized state - styles set by JS */
+  --anim-state: initialized;
+}
+
+/* ============================================
+   Hero-specific Animations
+   ============================================ */
+
+/* Hero image subtle zoom animation on load */
+.hero-image-animate {
+  animation: heroImageZoom var(--anim-duration-long) var(--anim-easing) forwards;
+}
+
+@keyframes heroImageZoom {
+  from {
+    transform: scale(1.03);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   Contact Section Animation Helpers
+   ============================================ */
+
+/* For the rounded image container */
+.contact-image-container {
+  opacity: 0;
+  transform: translateX(-32px);
+}
+
+.contact-image-container.anim-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================
+   Performance: Prevent CLS
+   ============================================ */
+
+/* Ensure animated elements have intrinsic size */
+[data-anim] {
+  /* These elements should have explicit dimensions or natural content sizing */
+  /* The transform/opacity animation doesn't affect layout */
+  contain: layout style;
+}
+
+/* For inline elements that might cause CLS */
+[data-anim]:not(.anim-visible):not(.anim-initialized) {
+  /* Initial state before JS runs - prevent flash */
+  visibility: visible; /* Don't use visibility:hidden as it causes CLS */
+}
