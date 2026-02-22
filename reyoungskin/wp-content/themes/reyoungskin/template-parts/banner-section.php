@@ -12,7 +12,7 @@ $banner_bg = get_theme_mod('reyoungskin_banner_bg', 'https://cdn.jsdelivr.net/gh
 
 <section class="relative w-full min-h-[520px] md:min-h-[600px] lg:min-h-[640px] flex items-center overflow-hidden">
   <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat "
       style="background-image: url('<?php echo esc_url($banner_bg); ?>');">
     </div>
     <div class="absolute inset-0 z-40 hidden md:block bg-black/10"></div>

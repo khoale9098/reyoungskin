@@ -59,11 +59,11 @@ get_header();
             <!-- Logo -->
             <div class="mb-6 md:mb-8 lg:mb-10 flex justify-center" data-anim="fade-up" data-anim-trigger="load" data-anim-delay="100">
               <img src="<?php echo esc_url($hero_logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?> Logo"
-                class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain" loading="eager">
+                class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-48 lg:h-48 object-contain" loading="eager">
             </div>
 
             <h2
-              class="mb-6 md:mb-8 font-serif lg:mb-10 text-lg sm:text-xl md:text-2xl lg:text-4xl leading-relaxed font-light"
+              class="mb-6 md:mb-8 font-serif lg:mb-10 text-lg sm:text-xl md:text-2xl lg:text-5xl leading-relaxed font-light"
               data-anim="fade-up" data-anim-trigger="load" data-anim-delay="200">
               Service Details
               <br class="hidden sm:block">
@@ -104,6 +104,10 @@ get_header();
 
     <!-- Pricing Menu Section -->
     <?php get_template_part('template-parts/pricing-menu'); ?>
+    
+    <!-- Results Gallery Section -->
+    <?php get_template_part('template-parts/results-gallery-section'); ?>
+    
     <?php get_template_part('template-parts/footer-contact-section'); ?>
     <?php
   }

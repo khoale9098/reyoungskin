@@ -27,7 +27,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Salmon DNA Microneedling
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -42,7 +42,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Nano Hydration Infusion
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -57,7 +57,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               INNO-EXOMA Exosome Skin
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -83,7 +83,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Chemical Peel
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -98,7 +98,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Hair Growth Support
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -113,7 +113,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Purifying Facial
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -143,12 +143,12 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
-              Facial Massage & Reflexology
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
+              Plasma Pen / Plasma Fibroblast
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
               <img loading='lazy'
-                src="<?php echo esc_url('https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/Facial%20Massage%20%26%20Reflexology.jpeg'); ?>"
+                src="<?php echo esc_url('https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/plasma.jpeg'); ?>"
                 alt="Facial Massage & Reflexology" class="w-full h-full object-cover object-center">
             </div>
           </div>
@@ -158,7 +158,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               LED Therapy
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">
@@ -173,7 +173,7 @@
         <div class="group" data-anim-child>
           <div class="relative overflow-hidden rounded-lg card-hover">
             <div
-              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-base font-medium  bg-primary">
+              class="absolute top-0 left-0 right-0 z-10 px-4 py-3 text-center text-white text-sm md:text-lg font-medium  bg-primary">
               Microdermabrasion
             </div>
             <div class="aspect-[4/3] mt-11 md:mt-12 img-hover">

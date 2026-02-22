@@ -21,10 +21,10 @@ $pricing_data = reyoungskin_get_pricing_data();
         <?php foreach ($pricing_data['left_column'] as $service): ?>
           <div class="space-y-3">
             <!-- Service Title & Price -->
-            <h3 class="text-2xl font-serif italic">
+            <h3 class="text-3xl font-serif italic">
               <?php echo esc_html($service['title']); ?>
               <?php if (isset($service['price'])): ?>
-                <span class="ml-2 text-base md:text-lg">
+                <span class="ml-2 text-base md:text-xl">
                   <?php echo esc_html($service['price']); ?>
                   <?php if (isset($service['was_price'])): ?>
                     <span class="line-through opacity-60 text-base ml-1"><?php echo esc_html($service['was_price']); ?></span>
@@ -83,13 +83,13 @@ $pricing_data = reyoungskin_get_pricing_data();
         <?php foreach ($pricing_data['right_column'] as $service): ?>
           <div class="space-y-3">
             <!-- Service Title & Price -->
-            <h3 class="text-2xl font-serif italic">
+            <h3 class="text-3xl font-serif italic">
               <?php echo esc_html($service['title']); ?>
               <?php if (isset($service['price'])): ?>
-                <span class="ml-2 text-base md:text-lg">
+                <span class="ml-2 text-base md:text-xl">
                   <?php echo esc_html($service['price']); ?>
                   <?php if (isset($service['extra_price'])): ?>
-                    <span class="text-sm ml-1">(<?php echo esc_html($service['extra_price']); ?>)</span>
+                    <span class="text-base ml-1">(<?php echo esc_html($service['extra_price']); ?>)</span>
                   <?php endif; ?>
                   <?php if (isset($service['was_price'])): ?>
                     <span class="line-through opacity-60 text-base ml-1"><?php echo esc_html($service['was_price']); ?></span>
