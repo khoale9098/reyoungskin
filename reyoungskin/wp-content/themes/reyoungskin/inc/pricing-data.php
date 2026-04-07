@@ -12,7 +12,7 @@ function reyoungskin_get_pricing_data()
         'left_column' => [
             [
                 'title' => 'Nano Hydration Infusion & LED Light',
-                'price' => '$99',
+                'price' => '$69',
                 'was_price' => '$159',
                 'paragraphs' => [
                     'A deeply hydrating treatment that infuses your skin with moisture using nano-technology, followed by LED light therapy to boost collagen production and reduce inflammation.',
@@ -39,7 +39,7 @@ function reyoungskin_get_pricing_data()
             ],
             [
                 'title' => 'Microneedling',
-                'price' => '$150',
+                'price' => '$109',
                 'was_price' => '$260',
                 'paragraphs' => [
                     'Ideal for reducing fine lines, wrinkles, acne scars, enlarged pores, and improving overall skin texture and firmness.',
@@ -58,7 +58,7 @@ function reyoungskin_get_pricing_data()
             ],
             [
                 'title' => 'Salmon DNA Microneedling',
-                'price' => '$190',
+                'price' => '$150',
                 'was_price' => '$299',
                 'paragraphs' => [
                     'Ideal for anti-aging, deep hydration, reducing fine lines and wrinkles, improving skin elasticity, and repairing damaged skin.',
@@ -128,7 +128,7 @@ function reyoungskin_get_pricing_data()
             ],
             [
                 'title' => 'Microdermabrasion + Blackhead removal',
-                'price' => '$65',
+                'price' => '$69',
                 'extra_price' => '$89 LED included',
                 'was_price' => '$129',
                 'paragraphs' => [
