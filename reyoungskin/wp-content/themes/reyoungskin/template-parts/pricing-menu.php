@@ -170,7 +170,7 @@ $pricing_data = reyoungskin_get_pricing_data();
 
     <!-- CTA Button -->
     <div class="flex justify-center mt-14 md:mt-16 lg:mt-20">
-      <a href="https://www.fresha.com/a/beauty-bar-n-makeup-lash-n-brows-auckland-437-remuera-road-al4mar88/booking?menu=true&offerItems=sv%3A25356601&pId=758924&dppub=true&utm_content=link_in_bio&utm_medium=social&utm_source=ig&employeeId=2577179&cartId=4fa72077-b048-4326-8ab5-55611323aa81"
+      <a href="https://www.fresha.com/book-now/reyoung-skin-r31eq3r8/services?lid=2890981&eid=5108859&share=true&pId=2795259"
         target="_blank" rel="noopener noreferrer"
         class="inline-block px-10 py-3 rounded-full text-white uppercase tracking-widest text-sm md:text-base font-medium transition-all duration-300 hover:brightness-110"
         style="background-color: rgba(15, 118, 110, 0.55);"

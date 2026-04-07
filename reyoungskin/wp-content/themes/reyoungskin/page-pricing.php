@@ -71,7 +71,7 @@ get_header();
             </h2>
 
             <!-- CTA Button -->
-            <a href="https://www.fresha.com/a/beauty-bar-n-makeup-lash-n-brows-auckland-437-remuera-road-al4mar88/booking?menu=true&offerItems=sv%3A25356601&pId=758924&dppub=true&utm_content=link_in_bio&utm_medium=social&utm_source=ig&employeeId=2577179&cartId=4fa72077-b048-4326-8ab5-55611323aa81"
+            <a href="https://www.fresha.com/book-now/reyoung-skin-r31eq3r8/services?lid=2890981&eid=5108859&share=true&pId=2795259"
               target="_blank" rel="noopener noreferrer"
               class="btn-cta inline-block px-8 sm:px-10 md:px-12 lg:px-16 py-3 sm:py-3.5 md:py-4 lg:py-5 font-serif text-xl sm:text-2xl md:text-3xl !no-underline font-normal text-white rounded-full mb-6 md:mb-8 lg:mb-10"
               style="background: linear-gradient(90deg, #1F8E9A 0%, #9ACB7A 100%); letter-spacing: 0.1em; box-shadow: 0 8px 20px rgba(0,0,0,0.12);"

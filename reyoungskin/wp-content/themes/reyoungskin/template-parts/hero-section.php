@@ -45,7 +45,7 @@ $hero_logo = get_theme_mod('reyoungskin_hero_logo', 'https://cdn.jsdelivr.net/gh
         </p>
 
         <!-- CTA Button -->
-        <a href="https://www.fresha.com/a/beauty-bar-n-makeup-lash-n-brows-auckland-437-remuera-road-al4mar88/booking?menu=true&offerItems=sv%3A25356601&pId=758924&dppub=true&utm_content=link_in_bio&utm_medium=social&utm_source=ig&employeeId=2577179&cartId=4fa72077-b048-4326-8ab5-55611323aa81"
+        <a href="https://www.fresha.com/book-now/reyoung-skin-r31eq3r8/services?lid=2890981&eid=5108859&share=true&pId=2795259"
           target="_blank" rel="noopener noreferrer"
           class="btn-cta inline-block px-12 md:px-16 lg:px-20 !no-underline py-4 md:py-5 font-serif text-2xl md:text-3xl lg:text-4xl font-normal text-white rounded-full mb-8 "
           style="background: linear-gradient(90deg, #1F8E9A 0%, #9ACB7A 100%); letter-spacing: 0.1em; box-shadow: 0 8px 20px rgba(0,0,0,0.12);"
