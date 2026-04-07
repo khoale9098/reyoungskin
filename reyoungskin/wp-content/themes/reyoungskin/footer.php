@@ -44,6 +44,13 @@
 
         </div>
 
+        <!-- Copyright -->
+        <div class="mt-12 md:mt-16 lg:mt-20 pt-8 border-t border-white/20" data-anim="fade-up" data-anim-delay="400">
+            <p class="text-white/70 text-sm md:text-base font-light tracking-wide">
+                &copy; <?php echo date('Y'); ?> ReYoungSkin. All rights reserved.
+            </p>
+        </div>
+
     </div>
 </footer>
 </div>

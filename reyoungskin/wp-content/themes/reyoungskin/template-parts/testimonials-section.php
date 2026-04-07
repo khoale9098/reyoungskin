@@ -21,7 +21,7 @@
             </svg>
           <?php endfor; ?>
         </div>
-        
+
         <div class="relative w-full max-w-sm">
 
           <div
@@ -55,7 +55,7 @@
             </svg>
           <?php endfor; ?>
         </div>
-        
+
         <div class="relative w-full max-w-sm">
 
           <div
@@ -89,7 +89,7 @@
             </svg>
           <?php endfor; ?>
         </div>
-        
+
         <div class="relative w-full max-w-sm">
 
           <div
@@ -117,7 +117,7 @@
 
 
     <div class="flex justify-center" data-anim="fade-up" data-anim-delay="100">
-      <a href="<?php echo esc_url(home_url('/reviews')); ?>"
+      <a  target="_blank" href="https://www.google.com/search?sca_esv=e8cd867175193f88&sxsrf=ANbL-n6nWV2j3wrIjA0631qQN4hS1a0TLg:1771744867873&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOT9ocMAoY06iVQP26T9_bT7izr7_-xfhmb7LVuaWQ41IxKM_HjCz8r5Vl2SCgp-8QEmzUPbBNc6FbvUS5uCqunealHz_&q=ReYoung+Skin+Reviews&sa=X&ved=2ahUKEwjMv-37x-ySAxVdUGcHHfNlFB0Q0bkNegQIIRAH&biw=1427&bih=773&dpr=2"
         class="btn-cta inline-block px-8 py-3 text-white font-medium text-sm tracking-wide"
         style="background-color: #6E8F87; border-radius: 999px;" aria-label="See more customer reviews">
         See More
