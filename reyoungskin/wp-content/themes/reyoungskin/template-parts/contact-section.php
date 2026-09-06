@@ -1,4 +1,8 @@
 <!-- Get In Touch Section -->
+<?php
+$address = get_theme_mod('reyoungskin_address', "437 Remuera Road, Remuera,\nAuckland 1050");
+$map_image = get_theme_mod('reyoungskin_map_image', 'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/Google%20Map.jpeg');
+?>
 <section class="w-full py-24 md:py-28 lg:py-32 xl:py-36 bg" style="background-color: #DDE5CF;">
   <div class="max-w-screen-2xl mx-auto px-6 md:px-8 lg:px-12">
 
@@ -14,7 +18,7 @@
       <!-- Left Column: Map -->
       <div class="w-full lg:w-1/2 lg:max-w-xl" data-anim="fade-right" data-anim-duration="800">
         <div class="w-full h-auto rounded-lg shadow-md overflow-hidden img-hover">
-          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/Google%20Map.jpeg"
+          <img loading="lazy" src="<?php echo esc_url($map_image); ?>"
             alt="ReYoung Skin Location Map">
         </div>
       </div>
@@ -26,8 +30,7 @@
             ReYoung Skin
           </h3>
           <p class="text-xl md:text-2xl leading-relaxed" style="color: #6F9C97;">
-            437 Remuera Road, Remuera,<br>
-            Auckland 1050
+            <?php echo nl2br(esc_html($address)); ?>
           </p>
         </div>
 
