@@ -48,6 +48,9 @@ require_once get_template_directory() . '/inc/acf-fields.php';
 // Include Custom Post Types
 require_once get_template_directory() . '/inc/cpt-pricing.php';
 
+// Include Custom Meta Boxes
+require_once get_template_directory() . '/inc/meta-box-gallery.php';
+
 // Auto-migrate old hardcoded pricing data to new CPT (runs once)
 function reyoungskin_migrate_pricing_data() {
     if (get_option('reyoungskin_pricing_migrated')) {

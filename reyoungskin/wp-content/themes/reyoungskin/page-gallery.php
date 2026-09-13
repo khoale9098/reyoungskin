@@ -16,19 +16,34 @@ if ($custom_logo_id) {
   $hero_logo = 'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/logo.png';
 }
 
-// Gallery images
-$gallery_images = array(
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/1.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/2.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/3.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/4.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/5.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/6.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/7.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/8.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/9.jpeg',
-  'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/10.jpeg',
-);
+// Gallery images - Fetch from custom meta box
+$gallery_images = array();
+$image_ids_string = get_post_meta(get_the_ID(), '_reyoungskin_gallery_images', true);
+if (!empty($image_ids_string)) {
+    $image_ids = explode(',', $image_ids_string);
+    foreach ($image_ids as $id) {
+        $img_url = wp_get_attachment_image_url($id, 'full');
+        if ($img_url) {
+            $gallery_images[] = $img_url;
+        }
+    }
+}
+
+// Fallback to default images if none are found in the database
+if (empty($gallery_images)) {
+    $gallery_images = array(
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/1.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/2.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/3.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/4.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/5.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/6.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/7.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/8.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/9.jpeg',
+        'https://cdn.jsdelivr.net/gh/khoale9098/reyoungskin@main/imgs/gallery/10.jpeg',
+    );
+}
 
 get_header();
 ?>
