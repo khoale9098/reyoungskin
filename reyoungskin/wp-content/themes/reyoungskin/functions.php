@@ -47,6 +47,7 @@ require_once get_template_directory() . '/inc/acf-fields.php';
 
 // Include Custom Post Types
 require_once get_template_directory() . '/inc/cpt-pricing.php';
+require_once get_template_directory() . '/inc/cpt-services.php';
 
 // Include Custom Meta Boxes
 require_once get_template_directory() . '/inc/meta-box-gallery.php';
@@ -175,3 +176,38 @@ function reyoungskin_migrate_pricing_data() {
     update_option('reyoungskin_pricing_migrated', true);
 }
 add_action('admin_init', 'reyoungskin_migrate_pricing_data');
+
+// Auto-migrate old hardcoded services data to new CPT (runs once)
+function reyoungskin_migrate_services_data() {
+    if (get_option('reyoungskin_services_migrated')) {
+        return;
+    }
+
+    if (!file_exists(get_template_directory() . '/inc/services-data.php')) {
+        return;
+    }
+
+    require_once get_template_directory() . '/inc/services-data.php';
+    if (!function_exists('reyoungskin_get_services_data')) return;
+
+    $services = reyoungskin_get_services_data();
+
+    foreach ($services as $item) {
+        $post_id = wp_insert_post(array(
+            'post_title'   => $item['title'],
+            'post_status'  => 'publish',
+            'post_type'    => 'service_item',
+            'menu_order'   => isset($item['order']) ? $item['order'] : 0,
+        ));
+
+        if ($post_id) {
+            if (!empty($item['image'])) {
+                update_post_meta($post_id, '_service_image_url', $item['image']);
+            }
+        }
+    }
+
+    update_option('reyoungskin_services_migrated', true);
+}
+add_action('admin_init', 'reyoungskin_migrate_services_data');
+

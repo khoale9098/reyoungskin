@@ -147,6 +147,57 @@ function reyoungskin_customize_register( $wp_customize ) {
 	) ) );
 
 	// --- SECTION: PRICING PAGE ---
+	// --- SECTION: SERVICES SECTION ---
+	$wp_customize->add_section( 'reyoungskin_services_section', array(
+		'title'       => __( 'Services Section (Homepage)', 'reyoungskin' ),
+		'priority'    => 38,
+		'description' => __( 'Customize the Our Services section on the front page.', 'reyoungskin' ),
+	) );
+
+	// Services Section Title
+	$wp_customize->add_setting( 'reyoungskin_services_title', array(
+		'default'           => 'Our Services',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'reyoungskin_services_title', array(
+		'label'   => __( 'Section Title', 'reyoungskin' ),
+		'section' => 'reyoungskin_services_section',
+		'type'    => 'text',
+	) );
+
+	// Services Button Text
+	$wp_customize->add_setting( 'reyoungskin_services_button_text', array(
+		'default'           => 'See Pricing',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'reyoungskin_services_button_text', array(
+		'label'   => __( 'Button Text', 'reyoungskin' ),
+		'section' => 'reyoungskin_services_section',
+		'type'    => 'text',
+	) );
+
+	// Services Button Link
+	$wp_customize->add_setting( 'reyoungskin_services_button_link', array(
+		'default'           => '/pricing',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'reyoungskin_services_button_link', array(
+		'label'   => __( 'Button Link', 'reyoungskin' ),
+		'section' => 'reyoungskin_services_section',
+		'type'    => 'text',
+	) );
+
+	// Services Background Color
+	$wp_customize->add_setting( 'reyoungskin_services_bg_color', array(
+		'default'           => '#CFE1D9',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'reyoungskin_services_bg_color', array(
+		'label'   => __( 'Section Background Color', 'reyoungskin' ),
+		'section' => 'reyoungskin_services_section',
+	) ) );
+
+	// Pricing Page Settings
 	$wp_customize->add_section( 'reyoungskin_pricing_page', array(
 		'title'       => __( 'Pricing Page Settings', 'reyoungskin' ),
 		'priority'    => 40,

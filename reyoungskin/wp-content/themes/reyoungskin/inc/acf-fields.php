@@ -63,6 +63,33 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 				'default_value'=> "It's about nurturing your skin with treatments that restore its natural balance,\nenhance its radiance, and protect its future. At Reyoung Skin, we combine\nadvanced skincare technology with gentle, personalized care to help you achieve\nlasting results that reflect your inner vitality.",
 				'new_lines'    => 'br',
 			),
+			// Services Section
+			array(
+				'key'          => 'field_services_tab',
+				'label'        => 'Services Section',
+				'type'         => 'tab',
+			),
+			array(
+				'key'          => 'field_services_section_title',
+				'label'        => 'Services Section Title',
+				'name'         => 'services_section_title',
+				'type'         => 'text',
+				'default_value'=> 'Our Services',
+			),
+			array(
+				'key'          => 'field_services_cta_text',
+				'label'        => 'CTA Button Text',
+				'name'         => 'services_cta_text',
+				'type'         => 'text',
+				'default_value'=> 'See Pricing',
+			),
+			array(
+				'key'          => 'field_services_cta_link',
+				'label'        => 'CTA Button Link',
+				'name'         => 'services_cta_link',
+				'type'         => 'text',
+				'default_value'=> '/pricing',
+			),
 		),
 		'location' => array(
 			array(
@@ -70,6 +97,40 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 					'param'    => 'page_type',
 					'operator' => '==',
 					'value'    => 'front_page',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position'   => 'normal',
+		'style'      => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+	) );
+
+
+
+	// 2. Service Item CPT Fields
+	acf_add_local_field_group( array(
+		'key'      => 'group_service_item',
+		'title'    => 'Service Item Details',
+		'fields'   => array(
+			array(
+				'key'          => 'field_service_image',
+				'label'        => 'Service Image',
+				'name'         => 'service_image',
+				'type'         => 'image',
+				'instructions' => 'Upload image for this service (recommended 4:3 ratio).',
+				'return_format'=> 'array',
+				'preview_size' => 'medium',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param'    => 'post_type',
+					'operator' => '==',
+					'value'    => 'service_item',
 				),
 			),
 		),
@@ -139,3 +200,4 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
 	) );
 
 }
+
